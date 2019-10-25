@@ -22,4 +22,14 @@ public class AccountTests {
         Assert.assertEquals(actual, expected);
     }
 
+    @Test
+    public void getAccountBalanceTest() {
+        Account account = new Account();
+
+        Double actual = account.getAccountBalance();
+        Double expected = 0.00;
+
+        Assert.assertEquals(actual, expected);
+    }
+
 }
