@@ -1,4 +1,4 @@
-package java.AccountClassTests;
+package AccountClassTests;
 
 import AccountClasses.Account;
 import org.junit.Assert;
