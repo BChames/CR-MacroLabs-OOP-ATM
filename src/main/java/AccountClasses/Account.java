@@ -17,5 +17,13 @@ public class Account {
         return this.accountBalance;
     }
 
+    public void setAccountBalance(Double newBalance) {
+        this.accountBalance = newBalance;
+    }
+
+    public void setAccountNumber(Integer newAcctNumber) {
+        this.accountNumber = newAcctNumber;
+    }
+
 
 }
