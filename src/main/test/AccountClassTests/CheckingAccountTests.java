@@ -30,5 +30,15 @@ public class CheckingAccountTests {
 
         Assert.assertEquals(actual, expected);
     }
+
+    @Test
+    public void withdrawTest(){
+        CheckingAccount checkingAccount = new CheckingAccount();
+
+        Double actual = checkingAccount.withdraw(50.00);
+        Double expected = -50.00;
+
+        Assert.assertEquals(expected, actual);
+    }
 }
 

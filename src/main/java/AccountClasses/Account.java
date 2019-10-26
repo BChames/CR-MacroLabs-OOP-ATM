@@ -16,5 +16,10 @@ public abstract class Account {
         return this.accountBalance;
     }
 
+    public Double withdraw(Double withdrawAmt) {
+        Double newBalance = this.accountBalance - withdrawAmt;
+        return newBalance;
+    }
+
 
 }
