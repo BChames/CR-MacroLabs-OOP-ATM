@@ -1,14 +1,18 @@
-public class UserProfile {
-    String firstName;
-    String lastName;
-    String userName;
-    String password;
+package Misc;
 
-    public void UserProfile(String firstName, String lastName, String userName, String password) {
+public class UserProfile {
+    private String firstName;
+    private String lastName;
+    private String userName;
+    private String password;
+    private String fullName;
+
+    public UserProfile(String firstName, String lastName, String userName, String password) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.userName = userName;
     this.password = password;
+    this.fullName = firstName + " " + lastName;
     }
 
     public String getFirstName() {
@@ -19,8 +23,12 @@ public class UserProfile {
         return this.lastName;
     }
 
-    public String getuserName() {
-        return this.firstName;
+    public String getFullName() {
+        return this.fullName;
+    }
+
+    public String getUserName() {
+        return this.userName;
     }
 
     public String getPassword() {
@@ -33,6 +41,10 @@ public class UserProfile {
 
     public void setLastName(String newLastName) {
         this.lastName = newLastName;
+    }
+
+    public void setFullName(String newFullName) {
+        this.fullName = newFullName;
     }
 
     public void setUserName(String newUserName) {
