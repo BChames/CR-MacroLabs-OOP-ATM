@@ -1,4 +1,4 @@
-package java.AccountClassTests;
+package AccountClassTests;
 
 import AccountClasses.Account;
 import org.junit.Assert;
@@ -6,7 +6,9 @@ import org.junit.Test;
 
     public class AccountTests {
 
-        @Test
+        /**Account is an abstract class and cannot be instantiated. Refer to subclass tests instead.**/
+
+
         public void constructorTest() {
             Account account = new Account();
         }
@@ -30,5 +32,7 @@ import org.junit.Test;
 
             Assert.assertEquals(actual, expected);
         }
-    }
 
+
+
+    }
