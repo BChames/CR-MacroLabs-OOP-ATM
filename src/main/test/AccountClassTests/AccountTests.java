@@ -17,9 +17,9 @@ public class AccountTests {
         Account account = new Account();
 
         Integer actual = account.getAccountNumber();
-        Integer expected = null;
+        Integer expected = 1;
 
-        Assert.assertEquals(actual, expected);
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
@@ -32,26 +32,5 @@ public class AccountTests {
         Assert.assertEquals(actual, expected);
     }
 
-    @Test
-    public void setAccountBalanceTest() {
-        Account account = new Account();
-        account.setAccountBalance(54.23);
-
-        Double actual = account.getAccountBalance();
-        Double expected = 54.23;
-
-        Assert.assertEquals(actual, expected);
-    }
-
-    @Test
-    public void setAccountNumberTest() {
-        Account account = new Account();
-        account.setAccountNumber(9876543);
-
-        Integer actual = account.getAccountNumber();
-        Integer expected = 9876543;
-
-        Assert.assertEquals(actual, expected);
-    }
 
 }

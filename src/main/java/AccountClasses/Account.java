@@ -1,12 +1,11 @@
 package AccountClasses;
 
 public class Account {
-    Integer accountNumber;
+    Integer accountNumber = 0;
     Double accountBalance = 0.00;
 
-
-    protected void Account(){
-
+    public Account(){
+        accountNumber++;
     }
 
     public Integer getAccountNumber() {
@@ -15,14 +14,6 @@ public class Account {
 
     public Double getAccountBalance(){
         return this.accountBalance;
-    }
-
-    public void setAccountBalance(Double newBalance) {
-        this.accountBalance = newBalance;
-    }
-
-    public void setAccountNumber(Integer newAcctNumber) {
-        this.accountNumber = newAcctNumber;
     }
 
 
