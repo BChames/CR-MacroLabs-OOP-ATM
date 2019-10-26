@@ -1,6 +1,6 @@
 package AccountClasses;
 
-public class Account {
+public abstract class Account {
     Integer accountNumber = 0;
     Double accountBalance = 0.00;
 
