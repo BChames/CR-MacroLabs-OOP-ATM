@@ -4,11 +4,10 @@ import Misc.UserProfile;
 
 
 public class ConsoleMock {
-    Integer input = 0;
 
     public void mainMenu() {
         //Ask user to login, create account, or exit. Take input and call nextStep and pass input
-        input = Console.getIntegerInput(
+        Integer input = Console.getIntegerInput(
                 "\nWelcome to the Bank of Kane ATM. Please select an option.\n\n" +
                         "1. Login\n" +
                         "2. Register\n" +
@@ -17,12 +16,12 @@ public class ConsoleMock {
         nextStep(input);
     }
 
-    public void nextStep(Integer input) {
+    private void nextStep(Integer input) {
         //Determine what the user wants to do and call relevant methods
         switch (input) {
             case 1:
-                promptForUserName();
-                promptForPassword();
+                String userName = promptForUserName();
+                String password = promptForPassword();
                 break;
             case 2:
                 getProfileAttributes();
@@ -33,30 +32,26 @@ public class ConsoleMock {
                 break;
             default:
                 Console.println("\nInvalid selection. Please try again.");
-                mainMenu();
+                //Main.mainMenu();
         }
 
     }
 
-    public String promptForUserName() {
-        String userName = Console.getStringInput("What is your user name?");
+    private String promptForUserName() {
+        String userName = Console.getStringInput("What is your desired user name?");
         return userName;
     }
 
-    public String promptForPassword() {
+    private String promptForPassword() {
         String password = Console.getStringInput("What is your password?");
         return password;
     }
 
-    public void getProfileAttributes() {
+    private void getProfileAttributes() {
         String firstName = Console.getStringInput("\nWhat is your first name?\n");
         String lastName = Console.getStringInput("\nWhat is your last name?\n");
         String userName = Console.getStringInput("\nWhat is your desired user name\n");
         String password = Console.getStringInput("\nWhat is your password\n");
-        createNewProfile(firstName, lastName, userName, password);
-    }
-
-    public void createNewProfile(String firstName, String lastName, String userName, String password) {
         UserProfile newUser = new UserProfile(firstName, lastName, userName, password);
     }
 
