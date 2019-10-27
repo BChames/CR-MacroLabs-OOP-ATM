@@ -1,4 +1,5 @@
 
+import models.UserProfileWarehouse;
 import services.ConsoleMock;
 
 /**
@@ -9,6 +10,7 @@ public class Main {
 
     public static void main(String[] args){
         ConsoleMock consoleMock = new ConsoleMock();
-        consoleMock.mainMenu();
+        UserProfileWarehouse userProfileHouse = new UserProfileWarehouse();
+        consoleMock.mainMenu(userProfileHouse);
     }
 }
