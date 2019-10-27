@@ -1,4 +1,7 @@
-package AccountClasses;
+package models;
 
 public class CheckingAccount extends Account {
+
+
+
 }

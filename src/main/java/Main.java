@@ -1,8 +1,3 @@
-package MainApplication;
-
-import ConsoleClasses.Console;
-import ConsoleClasses.ConsoleMock;
-
 /**
  * Created by iyasuwatts on 10/17/17.
  */

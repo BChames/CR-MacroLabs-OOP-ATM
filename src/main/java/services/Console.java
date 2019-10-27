@@ -1,4 +1,4 @@
-package ConsoleClasses;
+package services;
 import java.util.Scanner;
 
 public class Console {

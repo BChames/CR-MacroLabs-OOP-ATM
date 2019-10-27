@@ -1,4 +1,4 @@
-package UserProfiles;
+package models;
 
 import java.util.ArrayList;
 
@@ -34,5 +34,4 @@ public class UserProfileWarehouse {
     public void clearAllProfiles() {
         userProfilesList.clear();
     }
-
 }

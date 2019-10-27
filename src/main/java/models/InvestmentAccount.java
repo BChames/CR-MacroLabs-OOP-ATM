@@ -1,4 +1,4 @@
-package AccountClasses;
+package models;
 
 public class InvestmentAccount {
 }

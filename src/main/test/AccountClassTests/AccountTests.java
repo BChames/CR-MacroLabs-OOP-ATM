@@ -1,10 +1,6 @@
 package AccountClassTests;
 
-import AccountClasses.Account;
-import org.junit.Assert;
-import org.junit.Test;
-
-    public class AccountTests {
+public class AccountTests {
 
         /**Account is an abstract class and cannot be instantiated. Refer to subclass tests instead.**/
 /*
@@ -35,6 +31,4 @@ import org.junit.Test;
 
 
  */
-
-
     }

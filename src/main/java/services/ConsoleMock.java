@@ -1,6 +1,6 @@
-package ConsoleClasses;
+package services;
 
-import UserProfiles.UserProfile;
+import models.UserProfile;
 
 
 public class ConsoleMock {

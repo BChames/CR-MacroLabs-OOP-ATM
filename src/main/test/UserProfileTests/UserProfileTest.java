@@ -1,6 +1,6 @@
 package UserProfileTests;
 
-import UserProfiles.UserProfile;
+import models.UserProfile;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,10 +1,15 @@
-package UserProfiles;
+package models;
+
+import models.Account;
 
 public class UserProfile {
     private String firstName;
     private String lastName;
     private String userName;
     private String password;
+    private Account savingsAccount;
+    private Account checkingAccount;
+    private Account investmentAccount;
 
     public UserProfile(String firstName, String lastName, String userName, String password) {
     this.firstName = firstName;
