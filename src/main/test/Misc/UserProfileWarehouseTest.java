@@ -1,32 +1,89 @@
 package Misc;
 
+import org.h2.engine.User;
+import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class UserProfileWarehouseTest {
 
     @Test
-    public void add() {
+    public void addTest() {
+        String givenFirstName = "Kane";
+        String givenLastName = "Kopetski";
+        String givenUserName = "kkopetski";
+        String givenPassword = "defaultPW1!";
+
+        UserProfileWarehouse profileWarehouse = new UserProfileWarehouse();
+        UserProfile userProfile = new UserProfile(null, null, givenUserName, null);
+
+        profileWarehouse.add(userProfile);
+
+        UserProfile expected = userProfile;
+        UserProfile actual = profileWarehouse.getUserProfileByUserName("kkopetski");
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void getUserProfileByUserName() {
+    public void getUserProfileByUserNameTest() {
+        String givenUserName = "kkopetski";
+
+        UserProfileWarehouse profileWarehouse = new UserProfileWarehouse();
+        UserProfile userProfile = new UserProfile(null, null, givenUserName, null);
+
+        profileWarehouse.add(userProfile);
+
+        UserProfile expected = userProfile;
+        UserProfile actual = profileWarehouse.getUserProfileByUserName("kkopetski");
+
+        Assert.assertEquals(expected, actual);
+
     }
 
     @Test
-    public void removeUserProfile() {
+    public void removeUserProfileByUserNameTest() {
+        String givenUserName = "kkopetski";
+
+        UserProfileWarehouse userProfileWarehouse = new UserProfileWarehouse();
+        UserProfile userProfile = new UserProfile(null, null, givenUserName, null);
+
+        userProfileWarehouse.add(userProfile);
+        userProfileWarehouse.removeUserProfile(userProfile);
+
+        UserProfile expected = null;
+        UserProfile actual = userProfileWarehouse.getUserProfileByUserName(givenUserName);
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void removeUserProfileByUserName() {
+    public void getNumberOfProfilesTest() {
+        UserProfileWarehouse userProfileWarehouse = new UserProfileWarehouse();
+        UserProfile userProfile = new UserProfile(null, null, null, null);
+        UserProfile userProfile2 = new UserProfile(null, null, null, null);
+
+
+        userProfileWarehouse.add(userProfile);
+        userProfileWarehouse.add(userProfile2);
+
+
+        Integer expected = 2;
+        Integer actual = userProfileWarehouse.getNumberOfProfiles();
+
+        Assert.assertEquals(expected, actual);
     }
 
     @Test
-    public void getNumberOfProfiles() {
-    }
+    public void clearAllProfilesTest() {
+        UserProfileWarehouse userProfileWarehouse = new UserProfileWarehouse();
+        UserProfile userProfile = new UserProfile(null, null, null, null);
 
-    @Test
-    public void clearAllProfiles() {
+        userProfileWarehouse.add(userProfile);
+        userProfileWarehouse.clearAllProfiles();
+
+        Integer expected = 0;
+        Integer actual = userProfileWarehouse.getNumberOfProfiles();
+
+        Assert.assertEquals(expected, actual);
     }
 }
