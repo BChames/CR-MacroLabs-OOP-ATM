@@ -4,16 +4,15 @@ import AccountClasses.Account;
 import java.util.ArrayList;
 
 public class AccountWarehouse<AccountType extends Account> {
-
+/*
     private volatile ArrayList<AccountType> accountList = new ArrayList<>();
 
-    /*
-    public void add(UserProfile userProfile) {
-        userProfilesList.add(userProfile);
+    public void add(Account account) {
+        accountList.add(account);
     }
 
-    public UserProfile getUserProfileByUserName(String userName) {
-        for(UserProfile userProfile : userProfilesList) {
+    public Account getUserProfileByUserName(String userName) {
+        for(Account userProfile : accountList) {
             if(userProfile.getUserName().equals(userName)) {
                 return userProfile;
             }
@@ -37,7 +36,6 @@ public class AccountWarehouse<AccountType extends Account> {
         userProfilesList.clear();
     }
 
-     */
-
+ */
 
 }

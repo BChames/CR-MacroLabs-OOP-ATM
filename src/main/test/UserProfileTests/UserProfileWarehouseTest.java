@@ -9,10 +9,7 @@ public class UserProfileWarehouseTest {
 
     @Test
     public void addTest() {
-        String givenFirstName = "Kane";
-        String givenLastName = "Kopetski";
         String givenUserName = "kkopetski";
-        String givenPassword = "defaultPW1!";
 
         UserProfileWarehouse profileWarehouse = new UserProfileWarehouse();
         UserProfile userProfile = new UserProfile(null, null, givenUserName, null);
@@ -42,7 +39,7 @@ public class UserProfileWarehouseTest {
     }
 
     @Test
-    public void removeUserProfileByUserNameTest() {
+    public void removeUserProfileTest() {
         String givenUserName = "kkopetski";
 
         UserProfileWarehouse userProfileWarehouse = new UserProfileWarehouse();
@@ -50,6 +47,22 @@ public class UserProfileWarehouseTest {
 
         userProfileWarehouse.add(userProfile);
         userProfileWarehouse.removeUserProfile(userProfile);
+
+        UserProfile expected = null;
+        UserProfile actual = userProfileWarehouse.getUserProfileByUserName(givenUserName);
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void removeUserProfileByUserNameTest() {
+        String givenUserName = "kkopetski";
+
+        UserProfileWarehouse userProfileWarehouse = new UserProfileWarehouse();
+        UserProfile userProfile = new UserProfile(null, null, givenUserName, null);
+
+        userProfileWarehouse.add(userProfile);
+        userProfileWarehouse.removeUserProfileByUserName(givenUserName);
 
         UserProfile expected = null;
         UserProfile actual = userProfileWarehouse.getUserProfileByUserName(givenUserName);

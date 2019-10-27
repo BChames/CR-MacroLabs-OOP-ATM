@@ -36,6 +36,19 @@ public class UserProfileTest {
     }
 
     @Test
+    public void getFullName() {
+        String givenFirstName = "Kane";
+        String givenLastName = "Kopetski";
+
+        UserProfile newUser = new UserProfile(givenFirstName, givenLastName, null, null);
+
+        String actual = newUser.getFullName();
+        String expected = "Kane Kopetski";
+
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
     public void getuserName() {
         String givenUserName = "kkopetski";
 

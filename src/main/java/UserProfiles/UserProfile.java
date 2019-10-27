@@ -21,8 +21,6 @@ public class UserProfile {
         return this.lastName;
     }
 
-
-
     public String getUserName() {
         return this.userName;
     }
@@ -47,4 +45,7 @@ public class UserProfile {
         this.password = newPassword;
     }
 
+    public String getFullName() {
+        return this.firstName + " " + this.lastName;
+    }
 }

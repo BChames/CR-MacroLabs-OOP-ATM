@@ -17,9 +17,7 @@ public abstract class Account {
     }
 
     public Double withdraw(Double withdrawAmt) {
-        Double newBalance = this.accountBalance - withdrawAmt;
-        return newBalance;
+        return accountBalance = this.accountBalance - withdrawAmt;
     }
-
 
 }
