@@ -53,4 +53,16 @@ public class UserProfile {
     public String getFullName() {
         return this.firstName + " " + this.lastName;
     }
+
+    public Account getCheckingAccount() {
+        return this.checkingAccount;
+    }
+
+    public Account getSavingsAccount() {
+        return this.savingsAccount;
+    }
+
+    public Account getInvestmentAccount() {
+        return this.investmentAccount;
+    }
 }
