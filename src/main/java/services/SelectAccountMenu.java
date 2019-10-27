@@ -13,30 +13,33 @@ public class SelectAccountMenu {
                         "2. Savings Account\n" +
                         "3. Investment Account" +
                         "4. Back to Previous Menu \n" +
-                        "5. Back to Main Menu \n");
+                        "5. Logout and return to Main Menu \n");
         selectAccountMenuActions(input, userProfileList, userName, userProfile);
     }
 
     private void selectAccountMenuActions(Integer input, UserProfileWarehouse userProfileHouse, String userName, UserProfile userProfile) {
         //Determine what the user wants to do and call relevant methods
+        AccountActionMenu accountActionMenu = new AccountActionMenu();
         switch (input) {
             case 1:
                 Account checkingAccount = userProfile.getCheckingAccount();
-                AccountActionMenu accountActionMenu = new AccountActionMenu();
                 accountActionMenu.getAccountActionMenu(checkingAccount, userProfileHouse, userProfile, userName);
                 break;
             case 2:
-                userProfile.getSavingsAccount();
-                //go to account action menu
+                Account savingsAccount = userProfile.getSavingsAccount();
+                accountActionMenu.getAccountActionMenu(savingsAccount, userProfileHouse, userProfile, userName);
                 break;
             case 3:
-                userProfile.getSavingsAccount();
-                //go to account action menu
-
+                Account investmentAccount = userProfile.getInvestmentAccount();
+                accountActionMenu.getAccountActionMenu(investmentAccount, userProfileHouse, userProfile, userName);
                 break;
             case 4:
                 LoggedInMenu loggedInMenu = new LoggedInMenu();
                 loggedInMenu.getLoggedInMenu(userProfileHouse, userName, userProfile);
+                break;
+            case 5:
+                ConsoleMock consoleMock = new ConsoleMock();
+                consoleMock.mainMenu(userProfileHouse);
                 break;
             default:
                 Console.println("\nInvalid selection. Please try again.");
