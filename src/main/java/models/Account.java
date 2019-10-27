@@ -1,7 +1,7 @@
 package models;
 
 public abstract class Account {
-    private Integer accountNumber = 0;
+    private Integer accountNumber = generateAccountNumer();
     private Double accountBalance = 0.00;
 
     public Account(){
@@ -23,4 +23,12 @@ public abstract class Account {
     public void setAccountBalance(Double accountBalance) {
         this.accountBalance = accountBalance;
     }
+
+    public Integer generateAccountNumer() {
+        Integer max = 9999999;
+        Integer min = 1000000;
+        Integer range = max - min + 1;
+
+        return (int)(Math.random() * range) + min;
+        }
 }
