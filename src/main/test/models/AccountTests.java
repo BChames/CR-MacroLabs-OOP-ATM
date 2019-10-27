@@ -1,4 +1,4 @@
-package AccountClassTests;
+package models;
 
 public class AccountTests {
 

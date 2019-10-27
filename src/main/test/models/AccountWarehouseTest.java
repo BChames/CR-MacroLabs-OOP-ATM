@@ -1,4 +1,4 @@
-package AccountClassTests.AccountStorageTests;
+package models;
 
 import static org.junit.Assert.*;
 

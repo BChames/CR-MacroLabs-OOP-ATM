@@ -1,4 +1,4 @@
-package UserProfileTests;
+package models;
 
 import models.UserProfile;
 import org.junit.Assert;
