@@ -1,6 +1,7 @@
-package Misc;
+package UserProfileTests;
 
-import org.h2.engine.User;
+import UserProfiles.UserProfile;
+import UserProfiles.UserProfileWarehouse;
 import org.junit.Assert;
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package Misc;
+package MainApplication;
 
 import ConsoleClasses.Console;
 import ConsoleClasses.ConsoleMock;

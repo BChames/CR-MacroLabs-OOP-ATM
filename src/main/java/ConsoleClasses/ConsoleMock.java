@@ -1,6 +1,6 @@
 package ConsoleClasses;
 
-import Misc.UserProfile;
+import UserProfiles.UserProfile;
 
 
 public class ConsoleMock {

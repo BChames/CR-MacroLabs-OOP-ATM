@@ -1,4 +1,4 @@
-package Misc;
+package UserProfiles;
 
 public class UserProfile {
     private String firstName;

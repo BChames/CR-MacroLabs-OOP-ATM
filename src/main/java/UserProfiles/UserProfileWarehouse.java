@@ -1,6 +1,4 @@
-package Misc;
-
-import org.h2.engine.User;
+package UserProfiles;
 
 import java.util.ArrayList;
 

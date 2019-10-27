@@ -1,4 +1,4 @@
-package Misc;
+package DatabaseClasses;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
