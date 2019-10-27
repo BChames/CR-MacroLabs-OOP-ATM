@@ -36,19 +36,6 @@ public class UserProfileTest {
     }
 
     @Test
-    public void getFullName() {
-        String givenFirstName = "Kane";
-        String givenLastName = "Kopetski";
-
-        UserProfile newUser = new UserProfile(givenFirstName, givenLastName, null, null);
-
-        String actual = newUser.getFullName();
-        String expected = "Kane Kopetski";
-
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
     public void getuserName() {
         String givenUserName = "kkopetski";
 
@@ -97,20 +84,6 @@ public class UserProfileTest {
 
         String actual = newUser.getLastName();
         String expected = "Kopetski";
-
-        Assert.assertEquals(expected, actual);
-    }
-
-    @Test
-    public void setFullName() {
-        String newFullName = "Kane Kopetski";
-
-        UserProfile newUser = new UserProfile(null, null, null, null);
-
-        newUser.setFullName(newFullName);
-
-        String actual = newUser.getFullName();
-        String expected = "Kane Kopetski";
 
         Assert.assertEquals(expected, actual);
     }
