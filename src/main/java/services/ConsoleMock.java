@@ -1,7 +1,7 @@
 package services;
 
 import models.UserProfile;
-
+import models.UserProfileWarehouse;
 
 public class ConsoleMock {
 
@@ -22,9 +22,10 @@ public class ConsoleMock {
             case 1:
                 String userName = promptForUserName();
                 String password = promptForPassword();
+                //authenticate(userName, password);
                 break;
             case 2:
-                getProfileAttributes();
+                createProfile();
                 break;
             case 3:
                 Console.println("Bye!");
@@ -47,12 +48,22 @@ public class ConsoleMock {
         return password;
     }
 
-    private void getProfileAttributes() {
+    private void createProfile() {
         String firstName = Console.getStringInput("\nWhat is your first name?\n");
         String lastName = Console.getStringInput("\nWhat is your last name?\n");
         String userName = Console.getStringInput("\nWhat is your desired user name\n");
         String password = Console.getStringInput("\nWhat is your password\n");
         UserProfile newUser = new UserProfile(firstName, lastName, userName, password);
+        UserProfileWarehouse userProfileHouse = new UserProfileWarehouse();
+        userProfileHouse.add(newUser);
     }
 
+   /*public void authenticate(String userName, String password) {
+        if (userProfileHouse.getUserProfileByProfile(userName, password)) {
+
+        }
+    }
+
+
+    */
 }

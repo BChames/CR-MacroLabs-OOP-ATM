@@ -39,6 +39,42 @@ public class UserProfileWarehouseTest {
     }
 
     @Test
+    public void getUserProfileByUserNameAndPWTest() {
+        String givenUserName = "kkopetski";
+        String givenPassword = "defaultPW1!";
+
+        UserProfileWarehouse profileWarehouse = new UserProfileWarehouse();
+        UserProfile userProfile = new UserProfile(null, null, givenUserName, givenPassword);
+
+        profileWarehouse.add(userProfile);
+
+        UserProfile expected = userProfile;
+        UserProfile actual = profileWarehouse.getUserProfileByUserNameAndPW(givenUserName, givenPassword);
+
+        Assert.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void getUserProfileByUserNameAndPWFailTest() {
+        String givenUserName = "kkopetski";
+        String givenPassword = "defaultPW1!";
+        String wrongPassword = "wrong!!";
+
+        UserProfileWarehouse profileWarehouse = new UserProfileWarehouse();
+        UserProfile userProfile = new UserProfile(null, null, givenUserName, givenPassword);
+
+        profileWarehouse.add(userProfile);
+
+        UserProfile expected = null;
+        UserProfile actual = profileWarehouse.getUserProfileByUserNameAndPW(givenUserName, wrongPassword);
+
+        Assert.assertEquals(expected, actual);
+
+    }
+
+
+    @Test
     public void removeUserProfileTest() {
         String givenUserName = "kkopetski";
 

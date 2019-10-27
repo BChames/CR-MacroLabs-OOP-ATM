@@ -19,6 +19,16 @@ public class UserProfileWarehouse {
         return null;
     }
 
+    public UserProfile getUserProfileByUserNameAndPW(String userName, String password) {
+        for(UserProfile userProfile : userProfilesList) {
+            if(userProfile.getUserName().equals(userName) && userProfile.getPassword().equals(password)) {
+                return userProfile;
+            } else {
+                return null;
+            }
+        } return null;
+    }
+
     public void removeUserProfile(UserProfile userProfile) {
         userProfilesList.remove(userProfile);
     }
