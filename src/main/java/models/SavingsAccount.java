@@ -1,4 +1,4 @@
 package models;
 
-public class SavingsAccount {
+public class SavingsAccount extends Account {
 }
