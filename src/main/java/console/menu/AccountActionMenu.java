@@ -8,6 +8,8 @@ import service.AccountServices;
 import warehouse.AccountWarehouse;
 import warehouse.UserProfileWarehouse;
 
+import java.util.List;
+
 public class AccountActionMenu {
     private UserProfileWarehouse userProfileWarehouse;
     private AccountWarehouse accountWarehouse;
@@ -41,16 +43,31 @@ public class AccountActionMenu {
             case 1:
                 Double withdrawAmt = Console.getDoubleInput("How much would you like to withdraw?");
                 accountServices.withdraw(currentAccount, withdrawAmt);
+                Console.println("Money withdrawn. Balance remaining: " + currentAccount.getAccountBalance());
+                getAccountActionMenu();
                 break;
             case 2:
                 Double depositAmt = Console.getDoubleInput("How much would you like to deposit?");
-                accountServices.withdraw(currentAccount, depositAmt);
+                accountServices.deposit(currentAccount, depositAmt);
+                Console.println("Money deposited. New balance: " + currentAccount.getAccountBalance());
+                getAccountActionMenu();
                 break;
             case 3:
-                //TODO Need to finish this
+                String targetUser = Console.getStringInput("Which user would you like to transfer to?");
+                Double transferAmt = Console.getDoubleInput("How much would you like to transfer?");
+                UserProfile targetUserProfile = userProfileWarehouse.getUserProfileByUserName(targetUser);
+                List<Account> targetUsersAccounts = accountServices.getAllAccountsForAUser(targetUserProfile);
+                Console.println("Here are the available accounts:\n");
+                accountServices.printAccountNumbers(targetUsersAccounts);
+                Integer targetAccountNumber = Console.getIntegerInput("Which account number do you want to transfer to?");
+                Account targetAccount = accountWarehouse.getAccountByAccountNumber(targetAccountNumber);
+                accountServices.transferBetweenAccounts(currentAccount, targetAccount, transferAmt);
+                Console.println("Your new balance is: " + currentAccount.getAccountBalance());
+                getAccountActionMenu();
                 break;
             case 4:
-                System.out.println(currentAccount.getAccountBalance());
+                Console.println("Your account balance is: " + currentAccount.getAccountBalance());
+                getAccountActionMenu();
                 break;
             case 5:
                 LoggedInMenu loggedInMenu = new LoggedInMenu(userProfileWarehouse, accountWarehouse, userProfile);

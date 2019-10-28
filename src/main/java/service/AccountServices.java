@@ -54,7 +54,13 @@ public class AccountServices {
 
     public void getAccountSummary(List<Account> accountList) {
         for (Account account : accountList) {
-            Console.print("Here are your accounts:\n" + getAccountType(account) + " Account Number: " + getAccountNumber(account) + " Account Balance: " + getAccountBalance(account));
+            Console.print(getAccountType(account) + " Account Number: " + getAccountNumber(account) + " Account Balance: " + getAccountBalance(account) + "\n");
+        }
+    }
+
+    public void printAccountNumbers(List<Account> accountList) {
+        for (Account account : accountList) {
+            Console.print(getAccountType(account) + " Account Number: " + getAccountNumber(account) + "\n");
         }
     }
 
