@@ -1,10 +1,11 @@
 package model.account;
 
 public abstract class Account {
-    private Integer accountNumber = generateAccountNumer();
+    private Integer accountNumber;
     private Double accountBalance = 0.00;
 
     public Account(){
+        this.accountNumber = generateAccountNumer();
     }
 
 

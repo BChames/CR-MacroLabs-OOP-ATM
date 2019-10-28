@@ -1,5 +1,6 @@
-package modelsold;
+package models;
 
+import model.account.CheckingAccount;
 import org.junit.Assert;
 import org.junit.Test;
 

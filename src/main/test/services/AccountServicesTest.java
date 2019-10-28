@@ -1,15 +1,15 @@
-package servicesold;
+package services;
 
-import modelsold.CheckingAccount;
-import modelsold.SavingsAccount;
+
+import model.account.CheckingAccount;
+import model.account.SavingsAccount;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
+import service.AccountServices;
 
 public class AccountServicesTest {
-
-    AccountServices accountServices = new AccountServices();
+/*
+    private AccountServices accountServices = new AccountServices();
 
     @Test
     public void getAccountNumber() {
@@ -68,4 +68,6 @@ public class AccountServicesTest {
         Assert.assertEquals(expectedTargetBalance, actualTargetBalance);
 
     }
+
+ */
 }

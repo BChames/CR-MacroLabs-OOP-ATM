@@ -12,5 +12,9 @@ public class AccountWarehouse {
     public Account getAccountByAccountNumber(Integer accountNumber){
         return accounts.get(accountNumber);
     }
+
+    public void add(Account account) {
+        accounts.put(account.getAccountNumber(), account);
+    }
 }
 

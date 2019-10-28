@@ -13,7 +13,7 @@ public class AccountActionMenu {
     private AccountWarehouse accountWarehouse;
     private Account currentAccount;
     private UserProfile userProfile;
-    private AccountServices accountServices = new AccountServices();
+    private AccountServices accountServices;
 
 
     public AccountActionMenu(UserProfileWarehouse userProfileWarehouse, AccountWarehouse accountWarehouse, Account account, UserProfile userProfile){
@@ -21,6 +21,7 @@ public class AccountActionMenu {
         this.accountWarehouse = accountWarehouse;
         this.currentAccount = account;
         this.userProfile = userProfile;
+        accountServices = new AccountServices(accountWarehouse);
     }
 
     public void getAccountActionMenu() {

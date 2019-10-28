@@ -33,7 +33,8 @@ public class LoggedInMenu {
                 selectAccountMenu.getSelectAccountMenu();
                 break;
             case 2:
-                //TODO: Create get account creation menu
+                CreateAccountMenu createAccountMenu = new CreateAccountMenu(userProfileWarehouse, accountWarehouse, userProfile);
+                createAccountMenu.getCreateAccountMenu();
                 break;
             case 3:
                 Console.println("Bye!");

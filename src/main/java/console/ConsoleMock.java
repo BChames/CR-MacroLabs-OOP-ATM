@@ -35,7 +35,7 @@ public class ConsoleMock {
                 loggedInMenu.getLoggedInMenu();
                 break;
             case 2:
-                createProfile(userProfileWarehouse);
+                createProfile();
                 mainMenu();
                 break;
             case 3:
@@ -59,13 +59,13 @@ public class ConsoleMock {
         return password;
     }
 
-    public void createProfile(UserProfileWarehouse userProfileHouse) {
+    public void createProfile() {
         String firstName = Console.getStringInput("\nWhat is your first name?\n");
         String lastName = Console.getStringInput("\nWhat is your last name?\n");
         String userName = Console.getStringInput("\nWhat is your desired user name\n");
         String password = Console.getStringInput("\nWhat is your password\n");
         UserProfile newUser = new UserProfile(firstName, lastName, userName, password);
-        userProfileHouse.add(newUser);
+        userProfileWarehouse.add(newUser);
     }
 
    public UserProfile authenticate(String userName, String password) {

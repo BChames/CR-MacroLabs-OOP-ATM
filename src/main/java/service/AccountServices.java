@@ -10,6 +10,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AccountServices {
+    private AccountWarehouse accountWarehouse;
+    public AccountServices(AccountWarehouse accountWarehouse){
+        this.accountWarehouse = accountWarehouse;
+    }
 
     public Integer getAccountNumber(Account currentAccount) {
         return currentAccount.getAccountNumber();
@@ -39,9 +43,8 @@ public class AccountServices {
     }
 
     public List<Account> getAllAccountsForAUser(UserProfile userProfile){
-        List<Integer> allAccountNumbers = userProfile.getAcctNo();
+        List<Integer> allAccountNumbers = userProfile.getAccountNumberList();
         List<Account> allAccountsForGivenUser = new ArrayList<>();
-        AccountWarehouse accountWarehouse = new AccountWarehouse();
         for(Integer accountNumber : allAccountNumbers){
             Account account = accountWarehouse.getAccountByAccountNumber(accountNumber);
             allAccountsForGivenUser.add(account);
@@ -51,7 +54,7 @@ public class AccountServices {
 
     public void getAccountSummary(List<Account> accountList) {
         for (Account account : accountList) {
-            Console.print("Here are your accounts:\n" + getAccountType(account) + getAccountNumber(account) + getAccountBalance(account));
+            Console.print("Here are your accounts:\n" + getAccountType(account) + " Account Number: " + getAccountNumber(account) + " Account Balance: " + getAccountBalance(account));
         }
     }
 

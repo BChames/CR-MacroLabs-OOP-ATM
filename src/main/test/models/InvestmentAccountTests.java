@@ -1,5 +1,6 @@
 package modelsold;
 
+import model.account.InvestmentAccount;
 import org.junit.Assert;
 import org.junit.Test;
 

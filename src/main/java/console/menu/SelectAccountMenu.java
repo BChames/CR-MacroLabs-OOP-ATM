@@ -12,12 +12,13 @@ public class SelectAccountMenu {
     private UserProfileWarehouse userProfileWarehouse;
     private AccountWarehouse accountWarehouse;
     private UserProfile userProfile;
-    private AccountServices accountServices = new AccountServices();
+    private AccountServices accountServices;
 
     public SelectAccountMenu(UserProfileWarehouse userProfileWarehouse, AccountWarehouse accountWarehouse, UserProfile userProfile) {
         this.userProfileWarehouse = userProfileWarehouse;
         this.accountWarehouse = accountWarehouse;
         this.userProfile = userProfile;
+        accountServices = new AccountServices(accountWarehouse);
     }
 
 
@@ -31,5 +32,6 @@ public class SelectAccountMenu {
     public void selectAccountMenuActions(Integer accountNumber) {
         Account selectedAccount = accountWarehouse.getAccountByAccountNumber(accountNumber);
         AccountActionMenu accountActionMenu = new AccountActionMenu(userProfileWarehouse, accountWarehouse, selectedAccount, userProfile);
+        accountActionMenu.getAccountActionMenu();
     }
 }

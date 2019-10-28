@@ -1,5 +1,6 @@
 package model.user;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserProfile {
@@ -7,13 +8,14 @@ public class UserProfile {
     private String lastName;
     private String userName;
     private String password;
-    private List<Integer> acctNo;
+    private List<Integer> accountNumberList;
 
     public UserProfile(String firstName, String lastName, String userName, String password) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.userName = userName;
     this.password = password;
+    accountNumberList = new ArrayList<>();
     }
 
     public String getFirstName() {
@@ -52,8 +54,11 @@ public class UserProfile {
         return this.firstName + " " + this.lastName;
     }
 
+    public List<Integer> getAccountNumberList() {
+        return accountNumberList;
+    }
 
-    public List<Integer> getAcctNo() {
-        return acctNo;
+    public void addAccountNumberToList(Integer accountNumber) {
+        accountNumberList.add(accountNumber);
     }
 }
