@@ -1,8 +1,7 @@
-package services;
+package console;
 import java.util.Scanner;
 
 public class Console {
-
 
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
@@ -26,7 +25,7 @@ public class Console {
         return userInputInt;
     }
 
-    public static Double  getDoubleInput(String prompt) {
+    public static Double getDoubleInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         Double userInputDouble = scanner.nextDouble();

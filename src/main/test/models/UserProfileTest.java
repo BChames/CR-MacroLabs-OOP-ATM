@@ -1,6 +1,6 @@
-package models;
+package modelsold;
 
-import models.UserProfile;
+import modelsold.UserProfile;
 import org.junit.Assert;
 import org.junit.Test;
 

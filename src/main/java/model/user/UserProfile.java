@@ -1,15 +1,13 @@
-package models;
+package model.user;
 
-import models.Account;
+import java.util.List;
 
 public class UserProfile {
     private String firstName;
     private String lastName;
     private String userName;
     private String password;
-    private Account savingsAccount;
-    private Account checkingAccount;
-    private Account investmentAccount;
+    private List<Integer> acctNo;
 
     public UserProfile(String firstName, String lastName, String userName, String password) {
     this.firstName = firstName;
@@ -54,15 +52,8 @@ public class UserProfile {
         return this.firstName + " " + this.lastName;
     }
 
-    public Account getCheckingAccount() {
-        return this.checkingAccount;
-    }
 
-    public Account getSavingsAccount() {
-        return this.savingsAccount;
-    }
-
-    public Account getInvestmentAccount() {
-        return this.investmentAccount;
+    public List<Integer> getAcctNo() {
+        return acctNo;
     }
 }

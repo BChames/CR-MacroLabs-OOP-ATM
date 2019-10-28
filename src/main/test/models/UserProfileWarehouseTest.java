@@ -1,7 +1,7 @@
-package models;
+package modelsold;
 
-import models.UserProfile;
-import models.UserProfileWarehouse;
+import modelsold.UserProfile;
+import modelsold.UserProfileWarehouse;
 import org.junit.Assert;
 import org.junit.Test;
 
