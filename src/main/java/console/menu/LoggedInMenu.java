@@ -2,7 +2,6 @@ package console.menu;
 
 import console.ConsoleMock;
 import console.Console;
-import model.user.UserProfile;
 import warehouse.AccountWarehouse;
 import warehouse.UserProfileWarehouse;
 

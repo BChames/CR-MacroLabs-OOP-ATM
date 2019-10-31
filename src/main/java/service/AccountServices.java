@@ -4,7 +4,6 @@ import console.Console;
 import model.account.Account;
 import model.account.CheckingAccount;
 import model.account.SavingsAccount;
-import model.user.UserProfile;
 import warehouse.AccountWarehouse;
 import java.util.ArrayList;
 import java.util.List;

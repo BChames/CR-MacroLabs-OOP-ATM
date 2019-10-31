@@ -1,6 +1,5 @@
 package models;
 
-import model.user.UserProfile;
 import org.junit.Assert;
 import org.junit.Test;
 import warehouse.UserProfileWarehouse;

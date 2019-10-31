@@ -2,7 +2,6 @@ package console.menu;
 
 import model.account.Account;
 import console.Console;
-import model.user.UserProfile;
 import service.AccountServices;
 import warehouse.AccountWarehouse;
 import warehouse.UserProfileWarehouse;

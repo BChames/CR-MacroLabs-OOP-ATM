@@ -1,6 +1,5 @@
 package console;
 
-import model.user.UserProfile;
 import console.menu.LoggedInMenu;
 import warehouse.AccountWarehouse;
 import warehouse.UserProfileWarehouse;

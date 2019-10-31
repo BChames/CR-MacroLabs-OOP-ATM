@@ -3,7 +3,6 @@ package console.menu;
 import console.Console;
 import console.ConsoleMock;
 import model.account.Account;
-import model.user.UserProfile;
 import service.AccountServices;
 import warehouse.AccountWarehouse;
 import warehouse.UserProfileWarehouse;
