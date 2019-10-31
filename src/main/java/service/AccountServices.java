@@ -7,6 +7,7 @@ import model.account.SavingsAccount;
 import warehouse.AccountWarehouse;
 import java.util.ArrayList;
 import java.util.List;
+import model.user.UserProfile;
 
 public class AccountServices {
     private AccountWarehouse accountWarehouse;

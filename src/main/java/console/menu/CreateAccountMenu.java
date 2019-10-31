@@ -7,6 +7,7 @@ import model.account.InvestmentAccount;
 import model.account.SavingsAccount;
 import warehouse.AccountWarehouse;
 import warehouse.UserProfileWarehouse;
+import model.user.UserProfile;
 
 public class CreateAccountMenu {
     private UserProfileWarehouse userProfileWarehouse;

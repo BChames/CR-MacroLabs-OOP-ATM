@@ -4,6 +4,7 @@ import console.ConsoleMock;
 import console.Console;
 import warehouse.AccountWarehouse;
 import warehouse.UserProfileWarehouse;
+import model.user.UserProfile;
 
 public class LoggedInMenu {
     private UserProfileWarehouse userProfileWarehouse;
