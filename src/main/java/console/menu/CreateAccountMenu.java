@@ -5,9 +5,10 @@ import model.account.CheckingAccount;
 import console.Console;
 import model.account.InvestmentAccount;
 import model.account.SavingsAccount;
+import model.user.UserProfile;
 import warehouse.AccountWarehouse;
 import warehouse.UserProfileWarehouse;
-import model.user.UserProfile;
+
 
 public class CreateAccountMenu {
     private UserProfileWarehouse userProfileWarehouse;

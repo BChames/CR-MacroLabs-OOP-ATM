@@ -33,6 +33,8 @@ public class LoggedInMenu {
                 selectAccountMenu.getSelectAccountMenu();
                 break;
             case 2:
+                //Instantiate CreateAccountMenu object
+
                 CreateAccountMenu createAccountMenu = new CreateAccountMenu(userProfileWarehouse, accountWarehouse, userProfile);
                 createAccountMenu.getCreateAccountMenu();
                 break;

@@ -2,7 +2,7 @@ package model.user;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//Used to store user information in the userwarehouse
 public class UserProfile {
     //Main attributes/identifiers of each user
     //Private because these attributes should not be modified by any other class but UserProfile
@@ -67,5 +67,7 @@ public class UserProfile {
     }
     public void addAccountNumberToList(Integer accountNumber) {
         accountNumberList.add(accountNumber);
+
+
     }
 }
